@@ -1,3 +1,15 @@
+/*
+**  Image Browser 1.0.0
+**  Plugin for TinyMCE
+**  https://github.com/hozakar/imagebrowser-for-tinymce
+**
+**  Copyright 2014, Hakan Özakar
+**  http://beltslib.net
+**
+**  Licensed under CC0 1.0 Universal Licence:
+**  https://creativecommons.org/publicdomain/zero/1.0/
+*/
+
 "use strict";
 
 $(function () {

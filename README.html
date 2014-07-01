@@ -1,0 +1,45 @@
+<h1 id="image-browser-for-tinymce">Image Browser For TinyMCE</h1>
+<h3 id="image-browser">Image Browser</h3>
+<blockquote>
+<p>v.1.0.0</p>
+</blockquote>
+<h3 id="features-">Features:</h3>
+<ul>
+<li>Create, delete, organize directories</li>
+<li>Upload, move, copy image files</li>
+<li>Supports JP(E)G, PNG, GIF file types</li>
+</ul>
+<h3 id="usage">Usage</h3>
+<p>First copy &quot;imagebrowser&quot; directory to TinyMCE plugins folder.</p>
+<p>While initializing TinyMCE:</p>
+<pre><code class="lang-html">&lt;script&gt;
+    tinymce.init({
+        ...
+        plugins: &quot;imagebrowser&quot;,
+        toolbar: &quot;imagebrowser&quot;,
+        imagebrowser: {
+            windowcaption: &quot;&quot;,
+            root: &quot;/&quot;,
+            overwrite: false
+        }
+        ...
+    });
+&lt;/script&gt;</code></pre>
+<h3 id="parameters">Parameters</h3>
+<ul>
+<li>windowcaption: Defines dialog caption. (Default: Image Browser)</li>
+<li>root: Defines a root directory for Image Browser. (Default: &#39;/&#39;)</li>
+<li>overwrite: What to do if the file already exists while pasting (NOT while uploading). (Default: &#39;true&#39;)</li>
+</ul>
+<h3 id="screenshot">Screenshot</h3>
+<p><img src="http://beltslib.net/themes/images/screen.jpg" alt="Flat Button Pack"></p>
+<h3 id="languages">Languages</h3>
+<p>Supports English and Turkish.</p>
+<h3 id="dependencies">Dependencies</h3>
+<ul>
+<li><a href="https://github.com/blueimp/jQuery-File-Upload">jQuery File Upload By blueimp</a></li>
+<li><a href="http://jquery.com/">jQuery</a></li>
+</ul>
+<h2 id="license">License</h2>
+<p>CC0 1.0 Universal Licence</p>
+<p>Dependecies have their own licence information. Please view them before use.</p>

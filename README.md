@@ -51,4 +51,4 @@ License
 ------------
 CC0 1.0 Universal Licence
 
-* Dependecies have their own licence information. Please view them before use.
+Dependecies have their own licence information. Please view them before use.
