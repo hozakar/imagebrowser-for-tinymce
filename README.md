@@ -43,10 +43,11 @@ While initializing TinyMCE:
 ### Languages
 Supports English and Turkish.
 
-### Credits
+### Dependencies
 * [jQuery File Upload By blueimp](https://github.com/blueimp/jQuery-File-Upload)
 * [jQuery](http://jquery.com/)
 
 License
 ------------
 CC0 1.0 Universal
+** Dependecies have their own licence information. Please view them before use.
