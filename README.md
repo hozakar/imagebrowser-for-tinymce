@@ -32,9 +32,9 @@ While initializing TinyMCE:
 ```
 
 ### Parameters
-####windowcaption#### Defines dialog caption. (Default: Image Browser)
-####root#### Defines a root directory for Image Browser. (Default: '/')
-####overwrite#### What to do if the file already exists while pasting (NOT while uploading). (Default: 'true')
+* windowcaption: Defines dialog caption. (Default: Image Browser)
+* root: Defines a root directory for Image Browser. (Default: '/')
+* overwrite: What to do if the file already exists while pasting (NOT while uploading). (Default: 'true')
 
 
 ### Screenshot
