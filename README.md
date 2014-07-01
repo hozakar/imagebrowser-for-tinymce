@@ -49,5 +49,6 @@ Supports English and Turkish.
 
 License
 ------------
-CC0 1.0 Universal
-** Dependecies have their own licence information. Please view them before use.
+CC0 1.0 Universal Licence
+
+* Dependecies have their own licence information. Please view them before use.
