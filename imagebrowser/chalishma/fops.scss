@@ -274,17 +274,26 @@ button {
         font-weight: bold;
         margin-right: 12px;
         padding-top: 8px;
+        min-width: 54px;
     }
     input {
-        margin-right: 12px;
         &[name=width] {
             width: 80px;
         }
     }
     select {
         width: 100px;
-        margin-right: 12px;
     }
+}
+
+.m-left12 {
+    margin-left: 12px;
+}
+.m-right12 {
+    margin-right: 12px;
+}
+#selwidth {
+    margin-right: 6px;
 }
 
 .hidden {
@@ -303,4 +312,13 @@ button {
     left: 0;
     z-index: 999;
     display: none;
+}
+
+.clear {
+    clear: both;
+}
+
+.group {
+    display: inline-block;
+    position: relative;
 }
