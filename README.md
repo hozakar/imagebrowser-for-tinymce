@@ -38,7 +38,7 @@ While initializing TinyMCE:
 
 
 ### Screenshot
-![Flat Button Pack](http://beltslib.net/themes/images/screen.jpg)
+![imagebrowser](http://beltslib.net/themes/images/screen.jpg)
 
 ### Languages
 Supports English and Turkish.
