@@ -3,7 +3,7 @@ Image Browser For TinyMCE
 
 
 ### Image Browser ###
->v.1.0.0
+>v1.0.0
 
 ###Features:
 * Create, delete, organize directories
