@@ -199,7 +199,8 @@
     }
 
     function clearSlashes($path, $beginsWithSlash = TRUE, $endsWithSlash = TRUE) {
-        $path = '/'.$path.'/';
+        if(strpos($path, ':\\') != -1) $beginsWithSlash = TRUE; //Bugfix
+		$path = '/'.$path.'/';
         while(strpos($path, '//') > -1) {
             $path = str_replace('//', '/', $path);
         }
