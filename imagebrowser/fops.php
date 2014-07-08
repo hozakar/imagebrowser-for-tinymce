@@ -23,7 +23,6 @@
     $docRoot = clearSlashes($_SERVER['DOCUMENT_ROOT'], FALSE);
     $fullRoot = clearSlashes($docRoot.$root,FALSE);
 
-    //$_SESSION['toplimit'] = '';
     if(!$_SESSION['toplimit']) {
         $_SESSION['toplimit'] = $fullRoot;
         $_SESSION['initialroot'] = $root;
@@ -61,7 +60,7 @@
             }
         }
 
-        rename(clearSlashes(getDir().'fileupload/images/php/files/'.$file, FALSE, FALSE), clearSlashes($docRoot.$root.$currentFile, FALSE, FALSE));
+        rename(clearSlashes(getDir().'/fileupload/images/php/files/'.$file, FALSE, FALSE), clearSlashes($docRoot.$root.$currentFile, FALSE, FALSE));
 
         return;
     }
@@ -146,20 +145,29 @@
         return $translate[$phrase] ? $translate[$phrase] : $phrase;
     }
 
-    function getDir() {
-	    $hoy = get_included_files();
-	    foreach ($hoy as $f) {
-		    if(strpos($f, 'fops.php')>-1) {
+    function getDir($dosya = 'fops.php') {
+        $hoy = get_included_files();
+        foreach ($hoy as $f) {
+		    if(strpos($f, $dosya)>-1) {
 			    $h = $f;
 			    break;
 		    }
 	    }
 	    if($h) {
-		    $h = explode('fops.php', $h);
+		    $h = explode($dosya, $h);
 		    $h = $h[0];
 	    } else {
 		    $h = '';
 	    }
+
+	    /*
+	    ** Sunucuyu yapılandıran kişinin o anda ne içtiğine bağlı olarak
+	    ** document_root bilgisini ayrıca ayıklamak gerekebilir
+	    ** Teşekkürler isimtescil
+	    */
+	    $dr = $_SERVER['DOCUMENT_ROOT'];
+	    $h = $dr.end(explode($dr, $h));
+
 	    return $h;
     }
 
