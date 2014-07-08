@@ -13,6 +13,7 @@
 */
 
     session_start();
+	error_reporting(0);
     $ow = $_REQUEST['ow'];
     $lang = $_REQUEST['lang'];
 
