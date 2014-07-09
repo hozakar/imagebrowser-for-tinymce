@@ -23,7 +23,7 @@
     $docRoot = clearSlashes($_SERVER['DOCUMENT_ROOT'], FALSE);
     $fullRoot = clearSlashes($docRoot.$root,FALSE);
 
-    if(!$_SESSION['toplimit']) {
+    if(!$_SESSION['toplimit'] || $_GET['settoplimit'] == 'true') {
         $_SESSION['toplimit'] = $fullRoot;
         $_SESSION['initialroot'] = $root;
     }
