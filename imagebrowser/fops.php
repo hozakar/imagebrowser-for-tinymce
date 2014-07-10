@@ -165,8 +165,9 @@
 	    ** document_root bilgisini ayrıca ayıklamak gerekebilir
 	    ** Teşekkürler isimtescil
 	    */
-	    $dr = $_SERVER['DOCUMENT_ROOT'];
-	    $h = $dr.end(explode($dr, $h));
+		$h = str_replace('\\', '/', $h);
+		$dr =  str_replace('\\', '/', $_SERVER['DOCUMENT_ROOT']);
+		$h = $dr.end(explode($dr, $h));
 
 	    return $h;
     }
@@ -208,7 +209,8 @@
     }
 
     function clearSlashes($path, $beginsWithSlash = TRUE, $endsWithSlash = TRUE) {
-        if(strpos($path, ':\\') != -1) $beginsWithSlash = TRUE; //Bugfix
+        while(strpos($path, '\\') !== FALSE) $path = str_replace('\\', '/', $path); //Bugfix
+		if(strpos($path, ':/') === FALSE) $beginsWithSlash = TRUE; //Bugfix
 		$path = '/'.$path.'/';
         while(strpos($path, '//') > -1) {
             $path = str_replace('//', '/', $path);
