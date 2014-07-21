@@ -14,6 +14,10 @@
 
     session_start();
 	error_reporting(0);
+	
+	if(!$_SESSION['user']['id']) return;
+	if(count(explode('/'.$_SERVER['HTTP_HOST'], $_SERVER['HTTP_REFERER'])) < 2) return;
+	
     $ow = $_REQUEST['ow'];
     $lang = $_REQUEST['lang'];
 
